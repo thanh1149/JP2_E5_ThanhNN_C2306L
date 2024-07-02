@@ -11,9 +11,7 @@ public class WithdrawThread implements Runnable {
 
     @Override
     public void run() {
-        synchronized (accountService) {
             accountService.withdraw();
             System.out.println("Withdrawn: " + accountService.toString(" | "));
-        }
     }
 }

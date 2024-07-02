@@ -11,9 +11,7 @@ public class DepositThread implements Runnable {
 
     @Override
     public void run() {
-        synchronized (accountService) {
-            accountService.deposit();
-            System.out.println("Deposited: " + accountService.toString(" | "));
-        }
+       accountService.deposit();
+        System.out.println("Deposited: " + accountService.toString(" | "));
     }
 }
